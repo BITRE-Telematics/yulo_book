@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>2 The raw stuff | Yulo, a telematics story</title>
+<meta name="author" content="Richard Geen">
+<meta name="description" content="Where does the data come from, and why? Our data come from private firms, some smaller, some larger. They give us the data because they think they can benefit. They can benefit from better...">
+<meta name="generator" content="bookdown 0.23.5 with bs4_book()">
+<meta property="og:title" content="2 The raw stuff | Yulo, a telematics story">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Where does the data come from, and why? Our data come from private firms, some smaller, some larger. They give us the data because they think they can benefit. They can benefit from better...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2 The raw stuff | Yulo, a telematics story">
+<meta name="twitter:description" content="Where does the data come from, and why? Our data come from private firms, some smaller, some larger. They give us the data because they think they can benefit. They can benefit from better...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.10/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Roboto-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Roboto%20Mono-0.4.0/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Yulo, a telematics story</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome!</a></li>
+<li><a class="" href="why-telematics.html"><span class="header-section-number">1</span> Why Telematics?</a></li>
+<li><a class="active" href="the-raw-stuff.html"><span class="header-section-number">2</span> The raw stuff</a></li>
+<li><a class="" href="trips-and-stops.html"><span class="header-section-number">3</span> Trips and stops</a></li>
+<li><a class="" href="what-roads-are-they-on.html"><span class="header-section-number">4</span> What roads are they on?</a></li>
+<li><a class="" href="other-stuff.html"><span class="header-section-number">5</span> Other stuff</a></li>
+<li><a class="" href="storage---why-a-graph.html"><span class="header-section-number">6</span> Storage - Why a graph?</a></li>
+<li><a class="" href="a-small-sample-of-what-weve-done-so-far.html"><span class="header-section-number">7</span> A small sample of what we’ve done so far</a></li>
+<li><a class="" href="why-yulo.html"><span class="header-section-number">8</span> Why Yulo</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="the-raw-stuff" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2</span> The raw stuff<a class="anchor" aria-label="anchor" href="#the-raw-stuff"><i class="fas fa-link"></i></a>
+</h1>
+<div id="where-does-the-data-come-from-and-why" class="section level2 unnumbered">
+<h2>Where does the data come from, and why?<a class="anchor" aria-label="anchor" href="#where-does-the-data-come-from-and-why"><i class="fas fa-link"></i></a>
+</h2>
+<p>Our data come from private firms, some smaller, some larger. They give us the data because they think they can benefit. They can benefit from better investment in roads and stops. They can benefit from seeing how their activity compares to the industry as a whole. They can benefit by being able to plan their own journeys at different times and on different routes. But they also need to trust us that it won’t be used for anything else, and that we will respect their privacy. We are very keen to maintain that trust.</p>
+</div>
+<div id="what-does-it-look-like" class="section level2 unnumbered">
+<h2>What does it look like<a class="anchor" aria-label="anchor" href="#what-does-it-look-like"><i class="fas fa-link"></i></a>
+</h2>
+<p>We get data in a bunch of formats, including xml, json and csv but when it comes down to it telematics data is just a long list of observations. Each device pings every so often reporting “I am here at this time.” A longitude, a latitude, a time and an id. That’s it. Sometimes we might get some other things like a speedometer reading or even a compass direction (with we call an azimuth) but not usually. Turning this long list of pings into information about the freight network is not obvious.</p>
+<div class="inline-table"><table class="table table-sm">
+<caption>
+<span id="tab:dataFrames">Table 2.1: </span>Sample unprocessed data</caption>
+<thead><tr class="header">
+<th align="right">Vehicle</th>
+<th align="right">Longitude</th>
+<th align="right">Latitude</th>
+<th align="left">Firm</th>
+<th align="left">datetime</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="right">54</td>
+<td align="right">152.9470</td>
+<td align="right">-27.56354</td>
+<td align="left">Yellow</td>
+<td align="left">2016-05-23 13:47:58</td>
+</tr>
+<tr class="even">
+<td align="right">64</td>
+<td align="right">153.1452</td>
+<td align="right">-27.42933</td>
+<td align="left">Yellow</td>
+<td align="left">2016-05-06 10:32:03</td>
+</tr>
+<tr class="odd">
+<td align="right">701</td>
+<td align="right">153.1655</td>
+<td align="right">-27.42031</td>
+<td align="left">Yellow</td>
+<td align="left">2016-05-30 16:24:07</td>
+</tr>
+<tr class="even">
+<td align="right">937</td>
+<td align="right">153.1129</td>
+<td align="right">-27.46629</td>
+<td align="left">Yellow</td>
+<td align="left">2016-05-23 11:15:36</td>
+</tr>
+<tr class="odd">
+<td align="right">966</td>
+<td align="right">153.0080</td>
+<td align="right">-27.33093</td>
+<td align="left">Yellow</td>
+<td align="left">2016-05-16 13:00:33</td>
+</tr>
+</tbody>
+</table></div>
+<p>But first, lets just have a closer look at these pings and we notice some stuff that is funny even before we start.</p>
+</div>
+<div id="gps-error" class="section level2 unnumbered">
+<h2>GPS error<a class="anchor" aria-label="anchor" href="#gps-error"><i class="fas fa-link"></i></a>
+</h2>
+<div class="inline-figure">Here is the South Bank of Melbourne, and each dot is an observation. It’s pretty obvious that most are on the motorway. But some are on the shoulder, some even in the wall and some inside buildings. This clearly isn’t right, but GPS measurement error is a fact of life. Most of the time it is fine, but sometimes we need to account for the truck that says it is in a building when it is on the road.
+<img src="pics/southbankpings.png" style="width:100.0%" alt="the map as described in text">
+</div>
+</div>
+<div id="repeated-observations" class="section level2 unnumbered">
+<h2>Repeated observations<a class="anchor" aria-label="anchor" href="#repeated-observations"><i class="fas fa-link"></i></a>
+</h2>
+<p>When we first looked at the data we’d occasionally note trucks that just…stopped. It wasn’t just that they were in the same place, they were in <strong>exactly</strong> the same place. A truck that has stopped usually looks like it is moving around just a little bit because of GPS error, but these were in the same place, to 5-6 decimal places, for minutes on end. Moreover they were doing this in the middle of the road, which didn’t seem to be likely. In particular we noted them in places like the map above, at the mouth of the CityLink tunnel. GPS devices work by listening to satellites constantly shouting out where they are, but in a tunnel those satellites cannot be heard, so the GPS devices didn’t know where they were. Unable to create a correct location, sometimes they would gave a error but other times they would just report the last place they were sure they had been, at the mouth of the tunnel. Subsequently, after a good time apparently loitering at the entrance of the tunnel, they would abruptly appear at the exit. Whatever we did would need to account for what happened in the tunnel even if the GPS couldn’t tell us directly.</p>
+</div>
+<div id="weirder-errors" class="section level2 unnumbered">
+<h2>Weirder errors<a class="anchor" aria-label="anchor" href="#weirder-errors"><i class="fas fa-link"></i></a>
+</h2>
+<div class="inline-figure">Lastly, have a look at this group of traces (observations linked together in order) in Brisbane. It’s very easy to see the outlines of motorways and other main roads, but something is definitely off. I think it is reasonable to suspect vehicles did not teleport, or fly or otherwise travel from Brisbane into the bush or Moreton Bay and back in minutes. For whatever reason this firm, although most of its data was fine, occasionally threw in complete bogies which we would need to account for. In our broader data set we sometimes saw vehicles jump well into the Pacific ocean or into Indonesia as well.
+<img src="pics/yellow.png" style="width:100.0%" alt="a map of Brisbane as described in the text">
+</div>
+<p>So let’s get to work.</p>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="why-telematics.html"><span class="header-section-number">1</span> Why Telematics?</a></div>
+<div class="next"><a href="trips-and-stops.html"><span class="header-section-number">3</span> Trips and stops</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#the-raw-stuff"><span class="header-section-number">2</span> The raw stuff</a></li>
+<li><a class="nav-link" href="#where-does-the-data-come-from-and-why">Where does the data come from, and why?</a></li>
+<li><a class="nav-link" href="#what-does-it-look-like">What does it look like</a></li>
+<li><a class="nav-link" href="#gps-error">GPS error</a></li>
+<li><a class="nav-link" href="#repeated-observations">Repeated observations</a></li>
+<li><a class="nav-link" href="#weirder-errors">Weirder errors</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Yulo, a telematics story</strong>" was written by Richard Geen. It was last built on 2021-11-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

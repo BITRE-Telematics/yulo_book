@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>4 What roads are they on? | Yulo, a telematics story</title>
+<meta name="author" content="Richard Geen">
+<meta name="description" content="If we were to find out how trucks are using the road, we need to know which roads they are using. In fact, we need to know where the roads are. ##Matching to what? First we have to go on what...">
+<meta name="generator" content="bookdown 0.23.5 with bs4_book()">
+<meta property="og:title" content="4 What roads are they on? | Yulo, a telematics story">
+<meta property="og:type" content="book">
+<meta property="og:description" content="If we were to find out how trucks are using the road, we need to know which roads they are using. In fact, we need to know where the roads are. ##Matching to what? First we have to go on what...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="4 What roads are they on? | Yulo, a telematics story">
+<meta name="twitter:description" content="If we were to find out how trucks are using the road, we need to know which roads they are using. In fact, we need to know where the roads are. ##Matching to what? First we have to go on what...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.10/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Roboto-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Roboto%20Mono-0.4.0/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Yulo, a telematics story</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome!</a></li>
+<li><a class="" href="why-telematics.html"><span class="header-section-number">1</span> Why Telematics?</a></li>
+<li><a class="" href="the-raw-stuff.html"><span class="header-section-number">2</span> The raw stuff</a></li>
+<li><a class="" href="trips-and-stops.html"><span class="header-section-number">3</span> Trips and stops</a></li>
+<li><a class="active" href="what-roads-are-they-on.html"><span class="header-section-number">4</span> What roads are they on?</a></li>
+<li><a class="" href="other-stuff.html"><span class="header-section-number">5</span> Other stuff</a></li>
+<li><a class="" href="storage---why-a-graph.html"><span class="header-section-number">6</span> Storage - Why a graph?</a></li>
+<li><a class="" href="a-small-sample-of-what-weve-done-so-far.html"><span class="header-section-number">7</span> A small sample of what we’ve done so far</a></li>
+<li><a class="" href="why-yulo.html"><span class="header-section-number">8</span> Why Yulo</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="what-roads-are-they-on" class="section level1" number="4">
+<h1>
+<span class="header-section-number">4</span> What roads are they on?<a class="anchor" aria-label="anchor" href="#what-roads-are-they-on"><i class="fas fa-link"></i></a>
+</h1>
+<p>If we were to find out how trucks are using the road, we need to know which roads they are using. In fact, we need to know where the roads are.
+##Matching to what?
+First we have to go on what seems like a digression but is pretty important to one’s head around. What is a road and how do we get this idea of a road into a computer?</p>
+<p>We don’t usually think about this because we don’t need to. A road is the thing vehicles go on, but the Romans built them long before cars and mainly used them for marching. They’re made of tar, except when they’re made of concrete or stone or, like a majority of Australia’s roads, just of dirt. They are the place where only vehicles can go, except when they are shared zones. They’re the only place vehicles can go, except garages and driveways and carparks are not roads…or are they? Roads are on the ground, but they also use bridges and tunnels. So what is a road?</p>
+<p>For our purposes we are looking at transport of road freight. Freight is moving stuff from one point to another place. A road is a thing we use to move from one place to another by surface land transport, like trucks in our case. We’re not really worried about roads as a place, just a way of going between two places. In fact between many places and many places. This is how we put our messy idea of roads into a computer. The road outside the building you are now in is a way of getting to the next intersection, and from there the next intersection or curve in the road, and so on and until one gets to the next suburb, the next city, the next state.</p>
+<p>Most people would call this a network. Mathematicians like calling it a graph. We have a bunch of points connected by lines. The points (or nodes) are our places, the lines (or edges) are what connect them. They are our roads. They have no width, just a start and an end.</p>
+<p>A very famous example comes from the 18th century mathemetician Leonhard Euler. He’s how Wikipedia shows how he constructed a graph on his own city whilst attempting to solve the problem now known as the <a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg">Seven Bridges of Königsberg</a>. Each land mass is a node, and each bridge is an edge.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;Euler pioneered graph theory as a mathematical field but the basic idea is far older, for instance Gyoki style maps showing tribute routes to 13th century Kyoto (pictured) and even &lt;a href="https://www.smh.com.au/entertainment/tv-and-radio/songlines-20160606-gpc9y6.html"&gt;songlines&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/Marshall_Islands_stick_chart"&gt;Marshall Island Stick Charts&lt;/a&gt;. &lt;img src="pics/Kamakurajitaichizu.jpg" style="width:100.0%" alt="A 14th century Gyoki map of Japan"&gt;&lt;/p&gt;'><sup>3</sup></a></p>
+<div class="figure">
+<img src="pics/euler.PNG" style="width:100.0%" alt=""><p class="caption">An image from wikipedia showing a detailed image of Koenigsburg abstracted into a graph</p>
+</div>
+<p>There’s a bunch of choices we make when we do abstractions like this.</p>
+<p>How many places do we have. If a road is windy and not straight we may want to add more points and more lines so we can see better where it goes and how long it is, but how precise we are is a choice, trading off precision to avoid a dataset that is too ungainly. Euler didn’t care at all, but we do.
+It’d be impractical for every edge between two nodes to be called a road by itself, lest every kink in a road creates a new road. So instead we group them together into string of nodes and edges. But how long are these groupings? Imagine you are at the shops in Newtown, in Sydney. What road are you on? Most people would say “King St,” which goes from Broadway down to St Peters. But King St is also the Princes Highway, which keeps going to Kogarah, to Nowra, to Melbourne and all the way to Adelaide. That’s far too long for our purposes, since what happens on King St doesn’t affect Western Victoria, but even King St is too long if there is more traffic north of the intersection with Enmore Rd than South of it. So in the end these groupings are also choices about what seems practical and useful.</p>
+<p>From now on, we will call these groupings “segments.”</p>
+<p>And that is our task, find out what segments the trucks in our data set are using.</p>
+<div id="which-data" class="section level2 unnumbered">
+<h2>Which data<a class="anchor" aria-label="anchor" href="#which-data"><i class="fas fa-link"></i></a>
+</h2>
+<p>So where do we get this data? It might seem strange but governments don’t always have this right on hand already. After all, different levels of government manage different roads, and many roads aren’t built by government. Different state governments may have their own data set, but most roads are local and many local councils just <em>know</em> where the roads are. Government, collectively, has this information, but not in a single data set.</p>
+<p>But other organisations do need a single dataset, most notably many telematics and mapping firms. Such data is essential to businesses and they charge accordingly. But quite apart from the expense, what’s the use of our data if it can only be used by others that are also able or prepapared to shell out these huge funds? It’s also unclear how quickly we can get updates. Trucks will start using a motorway the moment it is opened, but is that in the data yet? And if there is a mistake, we might fix it for ourselves in our copy of the data but that doesn’t help any other user of our data with the road data they paid for.</p>
+<p>These proprietary data providers are also somewhat coy about how they collated their data, and I’m pretty sure I know why.</p>
+<div class="figure">
+<img src="pics/alwayshasbeen.png" style="width:100.0%" alt=""><p class="caption">An image of two astronauts in space, looking at the earth which is covered by the OSM logo. One exclaims “wait, it’s all OpenStreetMap!?” and the other, holding a gun to the former’s back, declares ominously “Always has been”</p>
+</div>
+<p>OpenSteetMap (OSM) is like Wikipedia for spatial data, created and cuated by an open group of dedicated volunteers. But unlike Wikipedia, which is read by many people, most users of OSM don’t know they are using it. It underlies many popular apps, whether providing public transport information or Pokemon Go, and is relied on by even the largest of firms. This is usally only obvious when things go wrong, for instance some unexpected results in Flight Simulator,<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;See &lt;a href="https://www.theguardian.com/games/2020/aug/21/melbourne-fawkner-suburbia-users-poke-fun-at-microsoft-flight-simulator-glitches"&gt;this for instance&lt;/a&gt;&lt;/p&gt;'><sup>4</sup></a> made by Bing Map’s owner Microsoft. I also suspect it was the reason for some unexpected nomenclature in Google Maps<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;see &lt;a href="https://www.sbs.com.au/nitv/nitv-news/article/2017/06/08/evonne-goolagong-gets-her-own-arena-named-after-her-least-google-maps-least-now"&gt;here&lt;/a&gt; and &lt;a href="https://www.couriermail.com.au/news/queensland/state-of-origin-legends-have-streets-named-after-them-in-juba-south-sudan-why/news-story/50d737a623d57604e90341b1f1b88a76"&gt;here&lt;/a&gt;&lt;/p&gt;'><sup>5</sup></a>.</p>
+<p>OSM data is free to everyone, which means if our data is matched to it, anyone can use it. If we find a mistake we can fix it, and the fix is there for everyone, and best of all, it gives us access to lots of open source tools for working with it.</p>
+</div>
+<div id="what-method" class="section level2 unnumbered">
+<h2>What method?<a class="anchor" aria-label="anchor" href="#what-method"><i class="fas fa-link"></i></a>
+</h2>
+<p>So how do we match trucks to the segments. Remember from Part 2 that inevitable GPS error means observations are always jumping around with random noise. Moreover our road segments are one dimensional, even if the GPS was entirely accurate the trucks wouldn’t be on the line unless they were in the middle of the road, which we hope they aren’t!
+The easiest method is just assuming they are on whichever segment is closest. This is called nearest neighbour matching. The computer takes segments within a given radius and checks which one is closest. Simple! But there are problems with this approach.</p>
+<p>The first is random GPS error, often enough to put an observation closer to a side road, or to a road next to a motorway. That’s obvious from the image of Southbank we saw in Part 2. We want something more accurate than that.</p>
+<div class="inline-figure">The second is even when it is accurate we only learn about the segment the truck was using when it pinged. We have data every 1 to 5 minutes; a truck may have used many segments in that time, but we only learn about one of them. You might think that with enough data you’d get information about every segment eventually but it’s not that simple.
+<img src="pics/skipped_segs.png" style="width:100.0%" alt="a stylised diagram of vehicles only pinging on selected segments">
+</div>
+<p>Obviously, as we noted earlier, some segments will never give us observations because they are in tunnels where the GPS until cannot hear the satellites. We still care about these,in fact they’re usually incredibly important motorways.</p>
+<p>Less obviously this biases our sample towards slower vehicles. Imagine two vehicles, one fast and one slow, both reporting once a minute. The fast vehicle goes twice as fast as the slow. The fast vehicle uses 10 segments in a minute, and is recorded on one. The slow vehicle takes 2 minutes and reports twice. Two thirds of our observations for these segments are now from the slow vehicle. The real average speed is 75 per cent of the fast vehicle, but our data makes it looks like 66 per cent. This is a stylised example but the greater number of slower observations add up. Slower vehicles spend more time on any given segment, so they are more likely to be on it when they ping, and all our data gets biased. And that’s when we have speed data anyway.</p>
+<p>Ideally we’d use something else.
+## Why Hidden Markov Map Matching?{-}
+Think back to the South Melbourne map again. It’s obvious to us that some of the points that are to the side of the motorway or on surface streets are really on the motorway, by <em>why</em> is it obvious. If we joined the dots in order it’d be even clearer. Trucks that are on the motorway are much more likely to have stayed on the motorway than to have left it via an offramp to get to a surface road that is close to the motorway. In short we are balancing the probabilities that the observation is on the right road with how probable it is that the truck would have taken the route necessary to get there.</p>
+<p>This is the core of Hidden Markov Map Matching (HMMM). We select candidates from segments near to the observation and calculate routes to each of them from the last observation. Segments closer to the observation are more likely, segments that have shorter routes on higher graded routes are also more likely. Our choice is the balance of the two. But how do we match the first observation? Well there we still have to use nearest neighbour.</p>
+<p>For those who care this is why it is called Hidden Markov Map Matching. Like a Markov chain the probability of the next observation’s location is a function of the last observation, but it is “hidden” because our first observation was an educated guess. And we match to a map.</p>
+<div class="inline-figure">In the diagram below we can see a vehicle has moved from observation I on segment A. It is now at II. It is closer to segment C, but the route to segment B is much more direct, so we conclude it is actually on B.
+<img src="pics/HMMM.png" style="width:100.0%" alt="an image showing two pings, the upper closer to a segment connected by a convoluted route to the first and but father than one connected by a traight line">
+</div>
+<p>Not only is this more accurate but we immediately get other benefits. Since we calculated the likely route we also know the road segments the vehicle used, even if it didn’t ping on them, or if they were in a tunnel. Now we have data on all segments. We also have the length of the route and the time it took, which means we can calculate an average speed as well. This is great too because it isn’t biased towards slower vehicles, and it better reflects travel experience than point estimates that can be zero (at a traffic light) or momentarily faster than average. Most importantly, this gives us speeds from the vast majority of vehicles for which we have no speed data.</p>
+</div>
+<div id="why-barefoot" class="section level2 unnumbered">
+<h2>Why Barefoot?<a class="anchor" aria-label="anchor" href="#why-barefoot"><i class="fas fa-link"></i></a>
+</h2>
+<p>There’s a cliche that the best code is the code you don’t write yourself. In fact the framework for this book is a lightly reworked version of <a href="https://grattan.github.io/R_at_Grattan/">Using R at Grattan</a>, in turn built on open source tools. HMMM has many implementations but we needed to find one that would work for us at scale. In our search we stumbled across a repository on Github called Barefoot.</p>
+<p>Now Barefoot wasn’t created for our task. It was unconcerned with speeds and sampling. In fact it was fairly unconcerned about the actual road segment it matched to. Its main concern was correcting where the dot on an in car display was, so it actually was on a road, in real time. But doing that required testing and troubleshooting with batches of sample data, and recording road ids to check things were working fine. We could exploit the debugging tools for our ends.</p>
+<p>We won’t go in to too much detail on the work we needed to do on Barefoot, aided by the generous assistance of its authors and maintainers. But in short we started with a server, written in Java, that would take a stream of GPS pings from cars and return pings with lat lons that were on an OSM road network. We ended up with a Java server that would take whole trips of GPS pings and return.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;A very quick example of an adjustment was limiting the search area for candidate segments. The original parameters looked up to 50 metres which was fine when processing one observation every second, but we were passing thousands of observations in batches. Halving the search radius to 25 metres reduced the area searched (as per circle geometry) by 92 per cent, and this sped things up a great deal.&lt;/p&gt;"><sup>6</sup></a></p>
+<ul>
+<li>an OSM segment ID</li>
+<li>a list of OSM segment IDs used to reach that segment (where available)</li>
+<li>the distance traveled on the network to get to that segment</li>
+<li>the average speed experienced</li>
+<li>the direction traveled on each segment</li>
+</ul>
+<p>##Further bogies
+We ran into other problems we didn’t expect.</p>
+<p>Some of these are related to a known problem with HMMM. Whilst the average error with HMMM is much less than nearest neighbour matching, when it does make an error it gets much worse quickly. Say HMMM mistakenly thinks a truck has turned off a motorway when it is still one. The next observation will likely be on the motorway. In that case the map matching might try to get the truck back on to the motorway by routing it to the nearest on ramp. Alternately it might deem this too unlikely and decide the next observation is in error and the truck is still on a side road. In either case the route is longer than the one the truck actually took so it appears that the truck is going <em>very</em> fast. And from then, if it has decided the truck is not on the motorway, it’ll do the same process again, and again, with errors getting larger until it decides all options are too improbable and starts again.</p>
+<p>Fortunately this is relatively rare and can be managed with judiciously managed parameters.</p>
+<p>Or so we thought. We ran into two unexpected problems.</p>
+<p>Data from one firm in particular was giving us problems. Very often, when trucks from this firm were travelling along motorways Barefoot would determine they were jumping from small residential surface street to small residential surface street, tearing in and out of cul de sacs at high speed and only rarely returning to the motorway. Why did Barefoot think this was more likely than the motorway. Indeed when we looked at the raw data each offending observation was closer to the side streets than the motorway, but the algorithm was meant to account for this. But they weren’t just closer to the side streets, they were right on it. And not just right on the area of the street but on the two dimensional line representing the street in the data. That precise placement is extremely unlikely in even perfectly accurate data, unless they were driving in the middle of the road. What had clearly happened was at some point the telematics provider for this firm had already matched the data to the nearest neighbour and “corrected” the pings. By the time Barefoot saw the data it had to weight the unliklihood of the route against the unlikelihood it wasn’t on the street which it appeared to be perfectly placed.</p>
+<p>To be honest we never solved this problem. The firm providing the data had started providing it in a different form that wasn’t pre matched, although they were unaware of any pre matching that had happened before, so we never had to deal with it.</p>
+<p>The second unexpected problem looked similar but was quite different. Instead of a single firm’s trucks being mistakenly taken off motorways all over the country, every firm’s trucks were being taken off some particular stretches of motorway. We first noticed this on Southern Cross Drive in Brisbane. Barefoot would, without fail, route the vehicles onto an off ramp and onto surface streets. It wasn’t that it didn’t know the next observation was on the motorway, in fact most of the time it came back on to the motorway at another on ramp to get close to the recorded position, even it it mean travelling in the reverse position. For whatever reason, Barefoot simply didn’t know the trucks could just keep going along the motorway. But why? The road segments were connected after all, and the one way direction was correct. Furthermore it wasn’t just a Barefoot error. If we used the Open Source Routing Machine<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;written in c not Java&lt;/p&gt;"><sup>7</sup></a> that is into OSM’s online display and asked for directions it would also route us off. We asked on the forums but other users, though helpful, were also baffled. Eventually, comparing offramps that were mistakenly taken and those that weren’t led us to a revelation. All the ones that worked were marked with a node labelled “motorway junction.” All those that didn’t work were just a plain, unlabelled node. It seems what happens is this:</p>
+<ul>
+<li>Motorway segments have the attribute “motorway.” Motorway on and off ramps have the attribute “motorway_link”</li>
+<li>If a motorway_link is connected to a motorway the node where they connect must be marked “motorway junction” as in the image on the left.</li>
+<li>If it is not labelled motorway junction (as on the right) a routing graph built from this data will deem the motorway only connected to the motorway_link and not the continuing motorway.</li>
+</ul>
+<div class="figure">
+<img src="pics/junction.png" style="width:100.0%" alt=""><p class="caption">an image showing two type of on/off ramp nodes</p>
+</div>
+<p>As far as we can tell this wasn’t documented anywhere, but it was easy to fix, and not just for ourselves but for all users of Australian OSM data. Fortunately it only applied to segments of “motorway” and “motorway_link” and not, say, to “primary” and “primary_link” so we spent an afternoon travelling along every stretch of motorway in Australia. In Sydney one user had systematically labelled each node <strong>just before</strong> each off ramp as a motorway junction instead of the one at the off ramp. Apparently they had, not foolishly, assumed the node label indicated where the turn off sign was!</p>
+<p>We had one other unexpected problem. Barefoot’s designers were all too aware of broad category of problems we faced here - exponential error from wrong decisions and disconnected road systems due to map data error - and had built in safeguards. Barefoot would stop investigating a particular route if it exceeded a certain threshold, say 15km. This means that, if the road network was disconnected from the correct road, or the routing had departed the true route before, or even if the truck has genuinely left the road network the engine would not futilely search the entire country for a way there, which would take up resources to no end. Instead it would just give an error when no route was found. Barefoot is designed for tracking vehicles providing data every few seconds so this isn’t a big deal, but were are using it to do batches of data reporting a position every minute or so. This caused some problems. Imagine a vehicle in South Western Sydney. It leaves a deport and heads South on the Hume Highway towards Canberra. But for whatever reason its GPS unit has conked out for 10 minutes. By the time it come back online the truck has travelled 10 minutes at 100km per hour, or nearly 17km. Barefoot tries the correct route, but stops at 15km and tries every other route within 15km of the depot, and then reports an error. We end up with no map matching for the trip, but it also took a lot of time and computation to get that error. We could increase the threshold to 20km, but that just means we still have the same problem when the system conks out for 15 minutes, and it would take even longer to get that error. It’d also take longer when the other kinds of problem arise.</p>
+<p>Our solution was fairly simple as a result. If we had a big time gap in a trip, we’d split it before giving it to Barefoot, and joing it back together later. We wouldn’t get speed or road data for that time, but averaging over 10 or 15 minutes likely wouldn’t tell us much about individual segments anyway. We’d still likely want to know the distance travelled, but we could impute that from our own instance of the Open Source Routing Machine, which I will discuss later.</p>
+<p>So now we have a bunch of stops and a bunch of trips, the road segments used on those trips, and the speed they went. It’s a lot of data, how do we handle it? But first, there’sa bunch of other miscellaneous processing I’d like to talk about.</p>
+
+</div>
+</div>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="trips-and-stops.html"><span class="header-section-number">3</span> Trips and stops</a></div>
+<div class="next"><a href="other-stuff.html"><span class="header-section-number">5</span> Other stuff</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#what-roads-are-they-on"><span class="header-section-number">4</span> What roads are they on?</a></li>
+<li><a class="nav-link" href="#which-data">Which data</a></li>
+<li><a class="nav-link" href="#what-method">What method?</a></li>
+<li><a class="nav-link" href="#why-barefoot">Why Barefoot?</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Yulo, a telematics story</strong>" was written by Richard Geen. It was last built on 2021-11-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

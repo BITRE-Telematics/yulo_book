@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>7 A small sample of what we’ve done so far | Yulo, a telematics story</title>
+<meta name="author" content="Richard Geen">
+<meta name="description" content="There’s a lot we can do with this data, but here’s a small sample of what we’ve done so far, and a few ideas for more Routes and congestion One of our aims with this project was learning about the...">
+<meta name="generator" content="bookdown 0.23.5 with bs4_book()">
+<meta property="og:title" content="7 A small sample of what we’ve done so far | Yulo, a telematics story">
+<meta property="og:type" content="book">
+<meta property="og:description" content="There’s a lot we can do with this data, but here’s a small sample of what we’ve done so far, and a few ideas for more Routes and congestion One of our aims with this project was learning about the...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="7 A small sample of what we’ve done so far | Yulo, a telematics story">
+<meta name="twitter:description" content="There’s a lot we can do with this data, but here’s a small sample of what we’ve done so far, and a few ideas for more Routes and congestion One of our aims with this project was learning about the...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.10/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Roboto-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Roboto%20Mono-0.4.0/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Yulo, a telematics story</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome!</a></li>
+<li><a class="" href="why-telematics.html"><span class="header-section-number">1</span> Why Telematics?</a></li>
+<li><a class="" href="the-raw-stuff.html"><span class="header-section-number">2</span> The raw stuff</a></li>
+<li><a class="" href="trips-and-stops.html"><span class="header-section-number">3</span> Trips and stops</a></li>
+<li><a class="" href="what-roads-are-they-on.html"><span class="header-section-number">4</span> What roads are they on?</a></li>
+<li><a class="" href="other-stuff.html"><span class="header-section-number">5</span> Other stuff</a></li>
+<li><a class="" href="storage---why-a-graph.html"><span class="header-section-number">6</span> Storage - Why a graph?</a></li>
+<li><a class="active" href="a-small-sample-of-what-weve-done-so-far.html"><span class="header-section-number">7</span> A small sample of what we’ve done so far</a></li>
+<li><a class="" href="why-yulo.html"><span class="header-section-number">8</span> Why Yulo</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="a-small-sample-of-what-weve-done-so-far" class="section level1" number="7">
+<h1>
+<span class="header-section-number">7</span> A small sample of what we’ve done so far<a class="anchor" aria-label="anchor" href="#a-small-sample-of-what-weve-done-so-far"><i class="fas fa-link"></i></a>
+</h1>
+<p>There’s a lot we can do with this data, but here’s a small sample of what we’ve done so far, and a few ideas for more</p>
+<div id="routes-and-congestion" class="section level2 unnumbered">
+<h2>Routes and congestion<a class="anchor" aria-label="anchor" href="#routes-and-congestion"><i class="fas fa-link"></i></a>
+</h2>
+<p>One of our aims with this project was learning about the road network. Our road matching was on individual road segments, so that was our starting point. In particular road users and planners care about congestion, but what is congestion? Most people will answer something about too many vehicles or insufficient infrastructure but what they are mainly worried about the effects. One effect is slower speeds than are otherwise desirable; in our context that means deliveries take longer than they need to and increases costs for firms and their clients. The other effect is uncertainty; if you’re unsure how long a delivery will take it makes it much harder to plan, and clients are unable to count on a delivery at an agreed time. Knowing the times and places where congestion delays and uncertainty happen not only helps planning by governments, but by firms and their clients who acn negotiate other times.</p>
+<p>For any given segment we have a lot of observations, each with a speed and a time stamp. This means we can calculate the distribution of speeds by hour of the day, day of the week or any breakdown we want. There’s also lots of statistics that we could use to convey the speed and uncertainty at any given time but we decided on two simple ones to make them accessible to everyone. The median speed (the midpoint of all the speed we observe) and the interquartile range (rang eof the middle 50 per cent of speeds)<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;I may as well mention here that our map matching still provides the occasional error so we exclude any observations that exceed the speed limit or 100 kph, whichever is lower&lt;/p&gt;"><sup>8</sup></a>. If the median speed is lower, speeds are generally lower. If the interquartile range is wider, it’s less certain how long things will take. The below graph is an example from a segment heading west on the M5 in Sydney, snapped from our in house visualisation. The dark blue is the median speed, the light blue is the interquartile range. Speed and uncertainty are ok except in the early morning and when the motorway is shared with returning commuters in the afternoon and evening.</p>
+<div class="figure">
+<img src="pics/eg_seg_graf.PNG" style="width:100.0%" alt=""><p class="caption">A graph as described in the text</p>
+</div>
+<p>The users of our data probably care more about whole journeys than individual segments. To get this we need to collate segment data together. If, say, we wanted to see how long it would take to travel on the M5 from the Hume Motorway to Port Botany in Sydney, we could select all the segments manually, but that would take a while and wouldn’t help ad hoc inquiries. Luckily we could adapt the Open Source Routing Machine (<a href="http://project-osrm.org">OSRM</a>) I mentioned in the map matching chapter. As long as we provided a start and end point<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;And occasionally some middle points if we needed to ensure a particular route&lt;/p&gt;"><sup>9</sup></a> a minor tweak of the OSRM code meant we would be returned a list of the segments on the route.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;as an bonus this also made an easy way to fill in distances for observations we were unable to match with a path&lt;/p&gt;"><sup>10</sup></a> Here’s the whole west bound route of the M5, animated.</p>
+<div class="figure">
+<img src="pics/M5%20-%20Hume%20Motorway%20to%20M1.gif" style="width:100.0%" alt=""><p class="caption">and animated gif of the M5 showing points of delay during peak hours near the M5 tunnel</p>
+</div>
+<div class="inline-figure">With these segments we could collate data and calculate travel times and uncertainty for the entire route. We’d have to make some assumptions, mainly that neighbouring segments had their slow days at the same time, but with median and 1st and 3rd quartile speeds, multiplied by the distance used on a segment, we have median and interquartile ranges for each hour of the day. Here’s estimated travel times for the whole M5 in 2019.
+<img src="pics/M5%20-%20Hume%20Motorway%20to%20M1_times.PNG" style="width:100.0%" alt="a graph for the M5, descibed in the report below">
+</div>
+<p>This worked great during the day, or on motorways where these was lots of data, but it could run into problems where data was more scarce. For some routes you might have a segment at 3am with no observations. Even if you had a small amount of data you ran the risk of outliers. A truck that spent most of its time at a traffic light between pings drags down the averages unless swamped by better data. As such, some routes were implausibly messy and volatile. We could just wait for more data to come in, but we might also want to track changes over shorter time periods, for instance comparing congestion week to week.</p>
+<p>In the end this problem was solved by the COVID-19 pandemic, because of two things. First I had to occupy myself whilst our IT systems caught up with working from home, and secondly there was suddenly a lot of interest in seeing the effect of a very sudden drop in commuter traffic on freight congestion. The former led me to finally learn the basics of Bayesian inference which, in crude terms, lets you use small amounts of data by adapting a reasonable prior belief. This, we realised, meant that with a prior like “the speeds on this segment are probably like the speeds of nearby segments at the same time” or “probably like the speeds of the same segment at other times,” we could tweak that belief with the small amounts of data we do have to get reasonable estimates. Applied to the need to see the effects of lockdown resulted in <a href="https://www.bitre.gov.au/publications/2020/freight-route-performance-under-covid-19">this paper</a> and graphs like this, estimates speeds even by hour by week, showing how travel time peaks were eliminated during initial lockdowns.</p>
+<div class="figure">
+<img src="pics/covid_monash.PNG" style="width:100.0%" alt=""><p class="caption">A graph showing expected travel times on the Monash Frewway from Dandenong to the city for the weeks Jan 6th to Jan 12, Feb 24 and March 1 and April 20 to April 26th, with pronounced peaks only noticeable in the February data</p>
+</div>
+<p>Subsequently this blossomed into an <a href="https://www.bitre.gov.au/publications/2021/freight-vehicle-congestion-australias-five-major-cities-2019">ongoing series of major reports on congestion in major Australian cities</a> (or alternately in gitbook form <a href="https://bitre-telematics.github.io/Congestion_2019/index.html">here</a>. You can find the code <a href="https://github.com/BITRE-Telematics/Congestion">here</a>.</p>
+</div>
+<div id="freight-data-hub" class="section level2 unnumbered">
+<h2>Freight data hub<a class="anchor" aria-label="anchor" href="#freight-data-hub"><i class="fas fa-link"></i></a>
+</h2>
+<p>Our colleagues in the Department have also created the <a href="https://datahub.freightaustralia.gov.au">National Freight Data Hub</a> which, along with other sources, uses our data on road segments and rest areas. This makes it easier for planners and drivers to estimate travel times on ad hoc routes, and to see where rest facilities are, how popular they are and the facilities they have.</p>
+</div>
+<div id="port-maps" class="section level2 unnumbered">
+<h2>Port Maps<a class="anchor" aria-label="anchor" href="#port-maps"><i class="fas fa-link"></i></a>
+</h2>
+<div class="inline-figure">As yet our data, whilst extensive, still comes from a limited number of firms. This makes it unwise to publish work on origin destination lest we betray information about our data providers and our clients, but we have still have developed techniques and have used the work internally. What we have published are reports on what we call the catchments of Australia’s major city ports. Like maps of large river basins they show journeys draining into the ports.
+<img src="pics/Perth_to.png" style="width:100.0%" alt="A map showing in-bound trips to the Port of Fremantle">
+</div>
+</div>
+<div id="potential-future-work" class="section level2 unnumbered">
+<h2>Potential future work<a class="anchor" aria-label="anchor" href="#potential-future-work"><i class="fas fa-link"></i></a>
+</h2>
+<p>There’s lots of other work we are keen to do, and work even on these existing products that we need to do. One thing we are keen to explore is “community detection.” Our data is already in a graph database and one form of graph analysis discovers communities of nodes, for instance clusters of friends in a social network. But this can also be applied spatially, for instance <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0166083">this paper</a> determined a economic geography of the United States based on commutes in the Census, finding labour market regions that did not always aligned with administrative boundaries. Perhaps there is a freight geography of Australia that planners do not yet fully understand; community detection in our graph could help discover it.</p>
+<p>But last, there’s a major unanswered question. Why “Yulo?”</p>
+
+</div>
+</div>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="storage---why-a-graph.html"><span class="header-section-number">6</span> Storage - Why a graph?</a></div>
+<div class="next"><a href="why-yulo.html"><span class="header-section-number">8</span> Why Yulo</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#a-small-sample-of-what-weve-done-so-far"><span class="header-section-number">7</span> A small sample of what we’ve done so far</a></li>
+<li><a class="nav-link" href="#routes-and-congestion">Routes and congestion</a></li>
+<li><a class="nav-link" href="#freight-data-hub">Freight data hub</a></li>
+<li><a class="nav-link" href="#port-maps">Port Maps</a></li>
+<li><a class="nav-link" href="#potential-future-work">Potential future work</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Yulo, a telematics story</strong>" was written by Richard Geen. It was last built on 2021-11-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

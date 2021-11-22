@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>3 Trips and stops | Yulo, a telematics story</title>
+<meta name="author" content="Richard Geen">
+<meta name="description" content="The first step must be cleaning the data, right? Garbage in, garbage out; if we start working with highly flawed data we won’t get any good results. So we’ve got to get rid of those erroneous...">
+<meta name="generator" content="bookdown 0.23.5 with bs4_book()">
+<meta property="og:title" content="3 Trips and stops | Yulo, a telematics story">
+<meta property="og:type" content="book">
+<meta property="og:description" content="The first step must be cleaning the data, right? Garbage in, garbage out; if we start working with highly flawed data we won’t get any good results. So we’ve got to get rid of those erroneous...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="3 Trips and stops | Yulo, a telematics story">
+<meta name="twitter:description" content="The first step must be cleaning the data, right? Garbage in, garbage out; if we start working with highly flawed data we won’t get any good results. So we’ve got to get rid of those erroneous...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.10/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Roboto-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Roboto%20Mono-0.4.0/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Yulo, a telematics story</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome!</a></li>
+<li><a class="" href="why-telematics.html"><span class="header-section-number">1</span> Why Telematics?</a></li>
+<li><a class="" href="the-raw-stuff.html"><span class="header-section-number">2</span> The raw stuff</a></li>
+<li><a class="active" href="trips-and-stops.html"><span class="header-section-number">3</span> Trips and stops</a></li>
+<li><a class="" href="what-roads-are-they-on.html"><span class="header-section-number">4</span> What roads are they on?</a></li>
+<li><a class="" href="other-stuff.html"><span class="header-section-number">5</span> Other stuff</a></li>
+<li><a class="" href="storage---why-a-graph.html"><span class="header-section-number">6</span> Storage - Why a graph?</a></li>
+<li><a class="" href="a-small-sample-of-what-weve-done-so-far.html"><span class="header-section-number">7</span> A small sample of what we’ve done so far</a></li>
+<li><a class="" href="why-yulo.html"><span class="header-section-number">8</span> Why Yulo</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="trips-and-stops" class="section level1" number="3">
+<h1>
+<span class="header-section-number">3</span> Trips and stops<a class="anchor" aria-label="anchor" href="#trips-and-stops"><i class="fas fa-link"></i></a>
+</h1>
+<p>The first step must be cleaning the data, right? Garbage in, garbage out; if we start working with highly flawed data we won’t get any good results. So we’ve got to get rid of those erroneous jumps to the middle of Moreton Bay, and that loitering at the entrance to tunnels. Then we can get to work working out what they are really doing.</p>
+<p>But how do we do that? Why are these errors so obvious?</p>
+<p>The jumps into the forest and sea are easy to realise are false, we could simply filter out all those areas. Except if there is a road through the forest, or a car ferry, and we haven’t started matching to roads yet so how would we know? Anyway, some of the jumps might be into other parts of the urban area, or even on to other roads. The real give away is they are moving too quickly, even if there was a straight highway out to Moreton bay they couldn’t go dozens of kilometres in a minute. We’re really making inferences about what we assume is reasonable behaviour, which is also what we’re going to do to work out what the trucks are doing. So maybe we can combine the two.</p>
+<p>Our goals are three things about the trucks. Activity, which is going from origins (where they stop) to a destination (where they stop). Information about the road network, which they use when they are not stopped, and stops which, uh, is where they stop.</p>
+<p>You may have noticed a theme here. A truck is either stopped or not stopped, and most of our subsequent analysis relies on that distinction. It also matters a great deal for our use of resources; we don’t want to match a lot of observations of stationary vehicles to the road network.</p>
+<div id="options" class="section level2 unnumbered">
+<h2>Options<a class="anchor" aria-label="anchor" href="#options"><i class="fas fa-link"></i></a>
+</h2>
+<p>In short we needed to find stops. Everything that wasn’t a stop was a trip.</p>
+<p>Our first attempt to see if trucks were stopped used the speed variable some firms provided. Most firms didn’t provide this, but it was a start. A stopped truck has a value of 0 right? But the results weren’t encouraging. A lot of the time it looked like trucks were stopped on the road, and other times they would loiter around a rest stop with low speeds (around 5kph) for 20 minutes or more. The speed variable wasn’t just limited to a portion of the data, it seemed to be a little messy. And anyway, what if a truck was in a depot, then moved to the other side to pick something up and we got a ping whilst it was moving. Normally we’d consider everything in the depot a stop, but the speed variable would pick up a trip.</p>
+<p>We also briefly considered whether we should just take series of observations in the vicinity of a known location as stops. If observations were loitering around a rest stop, or supermarket, or depot it was likely stopped there. But where do we get all those locations from? And how do we keep any list up to date when the freight environment changes all the time, and businessed open close constantly. Moreover one of our major concerns was where drivers were using informal rest areas instead of of formal ones. We’d have to know the location before we knew it. Instead we needed an “unsupervised” approach, that could find stop locations it didn’t already know about.</p>
+<p>Eventually we stumbled across a Belgian paper that was also concerned with grouping GPS traces into trips and stops. They weren’t concerned with trucks or even vehicles, but with creating prompts for activity surveys; by noting a stop at one location the person filling out the survey might remember what they were doing. But we could adapt their methodology fairly easily<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;as I was writing this I found &lt;a href="https://www.sciencedirect.com/science/article/abs/pii/S0966692321000302?casa_token=MTq3V4qfOuEAAAAA:XqAZEG94KdSkeg5ik5QZV_i5f6Ql5VVl_sIL1sqiejBCRJohC4CBi6PGRNmUIlSekBKxSQj3JmHc"&gt;other Belgian researchers&lt;/a&gt; who had applied the same paper to road freight. Great minds.&lt;/p&gt;'><sup>1</sup></a>.</p>
+<p>Their approach was based around clustering. A stop was just when the trace stayed within a given radius for a given time.</p>
+<p>We start with the first observation. We’ll provisionally put this in a stop for now.</p>
+<p>Now we look at the next stop and see how far away it is. If it is within our given radius it is still a provisional stop, so we add this point to it as well, and we calculate a centroid, or average position of the stop, from these points. This is what we compare the next observations to. Also, if it is exactly the same as the last point it’s one of the repeated observations, so we just chuck it.</p>
+<div class="inline-figure">We keep doing this until we reach an observation that has moved outside the radius. Maybe this was the end of a stop. But first we do a quick check of the “crow flies” speed. If it is something ridiculous we know it was one of the erroneous jumps, so we chuck it and move to the next one. If it seems legit, we turn our attention to the provisional stop points. If they cover a given amount of time, we have our first stop. We record the start time, end time and centroid, and everything else can get tossed. The new observation, and the last one (for reasons I will cover later) are added to a provisional trip.
+<img src="pics/tripgrouping.png" style="width:100.0%" alt="A simple representation of the process described in the text">
+</div>
+<p>If the provisional stop <em>isn’t</em> long enough, then all the observations are added to the last provisional trip. If the truck was moving prior to the provisional stop event there will already be observations there.</p>
+<p>As such, every time we confirm the end of a trip event, we have a trip stop pair; the summary data of the stop, and all the observations leading up to the stop, and we can record these.</p>
+<p>There is a potential bogey case however. Imagine a truck in a depot that stops on one side of the property. Its GPS unit doesn’t ping when the ignition is off so we only have 2 or so in the stop event and, due to random GPS error, both those pace it over the fence. Then it moves over to the other side of the property to get loaded. It’s quite possible we end up with two stops on either side of the depot, with a “trip” with one or two observations in between. In that case we’d reasonably call that a single stop. So we can do a check to see if stops are sufficiently close in time and space and, if they are, combine them whilst discarding the trip in between.</p>
+<p>Incidentally we need to give unique IDs to these trips and stops. We could number them in order for each vehicle, but what if we get earlier data? We could have a universal list but that’s another thing to maintain. Instead we can just exploit the fact vehicles can only be in one place at a time. The id for each trip and stop is the vehicle ID with the time it starts, in hexidecimal, stuck on the end.</p>
+</div>
+<div id="does-it-work" class="section level2 unnumbered">
+<h2>Does it work<a class="anchor" aria-label="anchor" href="#does-it-work"><i class="fas fa-link"></i></a>
+</h2>
+<p>Seemingly yes! When we first tried this on sample data we spent a great deal of time looking at stops to spot any bogeys. Most were at light industrial areas or rest areas on highways, but there were quite a few that looked less obvious. I found a cluster in the mountains just west of the Central Coast, but satellite imagry showed a cleared area next to powerlines with trucks visible, presumably with materials for repair and maintenance. Another was opposite a service station on the Federal Highway leading into Canberra, but (repeated) physical observation let us see trucks parked under a shady tree by the road. There was a cluster on a remote highway in Western Australia, and Google Street View imagery and aerial photography showed no trucks, no tyre marks and nowhere to even park between the road and the scrub, but afterwards newer imagery showed a freshly built rest area.</p>
+<p>Things appeared to work well, we had ordered our data, and cleaned it at the same time. Moreover, we were finding locations even without knowing about them before hand. Things made sense.</p>
+</div>
+<div id="a-note-on-parameters" class="section level2 unnumbered">
+<h2>A note on parameters<a class="anchor" aria-label="anchor" href="#a-note-on-parameters"><i class="fas fa-link"></i></a>
+</h2>
+<p>This whole process requires parameters. How long is a stop? How big is a reasonable stop area? How fast is too fast for a jump to be considered valid? How close in time and space do stops need to be to be considered a single stop. There are others as well. How do we choose these?</p>
+<p>The honest answer…it depends.</p>
+<p>We are concerned entirely with freight, and have relatively low resolution of data. The stops we care about entail rest breaks and the loading and unloading of freight, which usually imply a longer time, so we settled on a threshold of 15 minutes. Given we only have one ping every 1 to 5 minutes a lower resolution probably wasn’t feasible anyway. We’d lose some hurried toilet breaks, quick refueling and incredibly efficient loading and unloading<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;on this point where such efficient loading exists, such at ports, the trucks are usually waiting in a queue anyway&lt;/p&gt;"><sup>2</sup></a> but we’d have to live with that.</p>
+<p>But people who adapted this to other uses, such as public transport or pedestrian traffic would have to make other choices, and probably face a tradeoff between getting short stops and avoiding spurious “stops” at traffic lights or in congestion.</p>
+<p>Over all, choosing a shorter stop duration also means faster processing down the line. The shorter the stop duration, the more stops you get and the more observations are in stops. The more observations in stops the more stops can be discarded instead of matched to the map.</p>
+</div>
+<div id="implementation" class="section level2 unnumbered">
+<h2>Implementation<a class="anchor" aria-label="anchor" href="#implementation"><i class="fas fa-link"></i></a>
+</h2>
+<p>Unlike map matching (which we’ll cover in the next part) there was no existing code for us to adapt. We had to do it ourselves from scratch. We’re economists by training, not programmers, so we started in what we knew, which was R, a language made for statistics. This was enough to confirm hat the process worked, but it was slow and R really wasn’t the tool for the job. It’s very good for analysis and statistics but not for doing large scale tasks regularly, and even then we were expecting hundreds of millions of observations.</p>
+<p>We tried Python which is also popular for statistical work, but also runs services in production, but it was also slow, taking about a minute to process a whole vehicle. On a lark I tried rewriting the Python code in a different style [^away from for loops to map and reduces, broadly from imperative to functional] and this unexpectedly reduced processing times by two thirds, but it was still too slow. Both R and Python were scripting languages, easy to write on the fly but slower to run. Great for ad hoc tasks but not for ongoing work. We needed a compiled language instead.</p>
+<p>Usually when you have an ongoing task in R or Python that is slow you implement that particular thing in a compiled language, like C++, and call in in R or Python with a tool like Rcpp, but we decided against that. After all this was only one part of our process, we might as well make as much of our process in one program. There are many popular compiled languages, such a C and its family, and Java which our map matching was coded in (see the next chapter). Eventually we went with Go, for one main reason. Every one of our vehicles could be processed independently, what happened to one was irrelevant to the rest. This, in computing jargon, made our work “embarrassingly parallel,” which work could be split between processors in a CPU and be done at the same time. Go is designed to make this part easy.</p>
+<p>As such our tripgrouping could be incorporated into a larger program that co-ordinated the Yulo process, including interacting with our map matching server, which is in the next chapter.</p>
+
+</div>
+</div>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="the-raw-stuff.html"><span class="header-section-number">2</span> The raw stuff</a></div>
+<div class="next"><a href="what-roads-are-they-on.html"><span class="header-section-number">4</span> What roads are they on?</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#trips-and-stops"><span class="header-section-number">3</span> Trips and stops</a></li>
+<li><a class="nav-link" href="#options">Options</a></li>
+<li><a class="nav-link" href="#does-it-work">Does it work</a></li>
+<li><a class="nav-link" href="#a-note-on-parameters">A note on parameters</a></li>
+<li><a class="nav-link" href="#implementation">Implementation</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Yulo, a telematics story</strong>" was written by Richard Geen. It was last built on 2021-11-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

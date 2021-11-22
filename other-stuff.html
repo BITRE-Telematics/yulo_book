@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>5 Other stuff | Yulo, a telematics story</title>
+<meta name="author" content="Richard Geen">
+<meta name="description" content="We have observations for trips and stop, and we’ve matched the former to the road network, but the data isn’t quite ready, and there’s a bunch of housekeeping. Residuals Reading about trips and...">
+<meta name="generator" content="bookdown 0.23.5 with bs4_book()">
+<meta property="og:title" content="5 Other stuff | Yulo, a telematics story">
+<meta property="og:type" content="book">
+<meta property="og:description" content="We have observations for trips and stop, and we’ve matched the former to the road network, but the data isn’t quite ready, and there’s a bunch of housekeeping. Residuals Reading about trips and...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="5 Other stuff | Yulo, a telematics story">
+<meta name="twitter:description" content="We have observations for trips and stop, and we’ve matched the former to the road network, but the data isn’t quite ready, and there’s a bunch of housekeeping. Residuals Reading about trips and...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.10/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Roboto-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Roboto%20Mono-0.4.0/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Yulo, a telematics story</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome!</a></li>
+<li><a class="" href="why-telematics.html"><span class="header-section-number">1</span> Why Telematics?</a></li>
+<li><a class="" href="the-raw-stuff.html"><span class="header-section-number">2</span> The raw stuff</a></li>
+<li><a class="" href="trips-and-stops.html"><span class="header-section-number">3</span> Trips and stops</a></li>
+<li><a class="" href="what-roads-are-they-on.html"><span class="header-section-number">4</span> What roads are they on?</a></li>
+<li><a class="active" href="other-stuff.html"><span class="header-section-number">5</span> Other stuff</a></li>
+<li><a class="" href="storage---why-a-graph.html"><span class="header-section-number">6</span> Storage - Why a graph?</a></li>
+<li><a class="" href="a-small-sample-of-what-weve-done-so-far.html"><span class="header-section-number">7</span> A small sample of what we’ve done so far</a></li>
+<li><a class="" href="why-yulo.html"><span class="header-section-number">8</span> Why Yulo</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="other-stuff" class="section level1" number="5">
+<h1>
+<span class="header-section-number">5</span> Other stuff<a class="anchor" aria-label="anchor" href="#other-stuff"><i class="fas fa-link"></i></a>
+</h1>
+<p>We have observations for trips and stop, and we’ve matched the former to the road network, but the data isn’t quite ready, and there’s a bunch of housekeeping.</p>
+<div id="residuals" class="section level2 unnumbered">
+<h2>Residuals<a class="anchor" aria-label="anchor" href="#residuals"><i class="fas fa-link"></i></a>
+</h2>
+<p>Reading about trips and stops you may have realised that if we only record a trip and stop when the stop finishes we’ll usually have some data left over from a trip stop pair that hasn’t finished yet. These are the residuals, and we can fairly easily stick them on to the front of the next batch of data. The problem arises because we want to link chains of stops (more about that later in the example work). Linking stops in order in a batch is easy enough, but between batches is a bit trickier. We could append an id of the last stop to the residual data but that’s a bit dangerous. This is why the first observation of a trip is also the last observation of the stop, we not only get the true start of a trip, but we can link the unique time stamps across batches.</p>
+</div>
+<div id="time-and-geocoding" class="section level2 unnumbered">
+<h2>Time and geocoding<a class="anchor" aria-label="anchor" href="#time-and-geocoding"><i class="fas fa-link"></i></a>
+</h2>
+<p>So far we have only cared about relative time for a given vehicle; which observations come before and after and by how much. As such we could have all the times in Universal Mean Time, or in a Unix epoch; that is the number of seconds since Midnight on January 1st 1970. This is also important because if we always used local time, trucks might travel suddenly forward or backwards in time when they cross state borders and time zones.</p>
+<p>But we care a great deal about the local time in our analysis; knowing the times of day when rest stops and road segments are most used or congested. To do this we need to know what time zone each stop and observation is in. In the Australian context that means knowing what state they are in.</p>
+<p>This is good for other reasons. Later in our analysis we will care a lot about not only about which state something happened, but smaller units of Australian geography such as SA2s. If we attribute a small unit like SA2 to our trips and observations we get the time zone, and we also get a quick spatial index for our later work.</p>
+<p>Finding out what area points are in is a well known problem, but with our volumes of data it can take a lot of tim matching hundreds of millions of observations. Luckily almost all of these are already matched to less than 2 million road segments which tend to stay in one state, so all we need to do is map those segments and the stops.</p>
+<p>There’s a problem however. We are using the Australian Statistical Geographical Standard (ASGS) polygons from the ABS, and they hug the coastline very, very closely and sometimes hug the banks of major waterways near the coast. This means that the Bradfield Highway for instance, which used the Sydney Harbour Bridge, is not in any SA2 or Australia State, at least according to these polygons. Not are any number of vehicular ferries, such as the Spirit of Tasmania. In addition, coastlines change. I don’t just mean erosion and sediment and tides. People reclaim land and build on it. In particular they do this near ports where land is scarce and valuable, and we have a lot of trucks stopping at ports. We can manually change the shapefiles when this happens, but we’d have to be vigiliant.</p>
+<p>The solution is pretty simple - when we fail to match an SA2 we just match to the nearest one instead - but this was a good example of an unexpected problem that needed solving.</p>
+</div>
+<div id="locations" class="section level2 unnumbered">
+<h2>Locations<a class="anchor" aria-label="anchor" href="#locations"><i class="fas fa-link"></i></a>
+</h2>
+<p>Whilst our stop definition doesn’t need known locations, there are specific locations we care about, in particular rest areas. If we’re matching stops to to SA2s, we may as well match them to rest areas as well, which we can get from other sources. May as well do loading zones where we have data for that as well. And wait, every street address in the country is part <a href="https://data.gov.au/dataset/ds-dga-19432f89-dc3a-4ef3-b943-5326ef1dbecc/details">G-NAF</a> so we can match to that as well. Since these are all known before processing we can use an algorithm like rtree to quickly find which location is closest and, if it is close <em>enough</em> determine our stop was at that location.</p>
+</div>
+<div id="confidentiality-and-clustering" class="section level2 unnumbered">
+<h2>Confidentiality and clustering<a class="anchor" aria-label="anchor" href="#confidentiality-and-clustering"><i class="fas fa-link"></i></a>
+</h2>
+<p>Lastly, we care a lot about the specific location (rather than general, SA2 level location) of some stops, but not others. If a truck stops at a port, or a rest stop, or an informal rest area, that is very important to the project and a reason why firms provided their data in the first place. But stops at particular businesses are less important and, if published, might betray commercial information. Worse still, some drivers take their trucks home, so their stops can expose their place of residence. We need a way of distinguishing places we are interested in from places that are none of our business.</p>
+<p>For locations like rest stop and ports that’s easy, but what about informal rest areas? Our solution was to use a clustering algorithm. It finds find where a large number of stops were together in time and space, such as a regularly used patch of dirt by a highway. We can then filter these stops based on how may vehicles. If it is only one vehicle it might be someone’s home, and will be ignored. If it is only one firm it might be a client or a depot, so we will also ignore it. But if it is used by a variety of firms it is of interest to us.</p>
+<p>We’ve got a lot of information now, so how to we handle it?</p>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="what-roads-are-they-on.html"><span class="header-section-number">4</span> What roads are they on?</a></div>
+<div class="next"><a href="storage---why-a-graph.html"><span class="header-section-number">6</span> Storage - Why a graph?</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#other-stuff"><span class="header-section-number">5</span> Other stuff</a></li>
+<li><a class="nav-link" href="#residuals">Residuals</a></li>
+<li><a class="nav-link" href="#time-and-geocoding">Time and geocoding</a></li>
+<li><a class="nav-link" href="#locations">Locations</a></li>
+<li><a class="nav-link" href="#confidentiality-and-clustering">Confidentiality and clustering</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Yulo, a telematics story</strong>" was written by Richard Geen. It was last built on 2021-11-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

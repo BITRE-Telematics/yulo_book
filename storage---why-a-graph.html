@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>6 Storage - Why a graph? | Yulo, a telematics story</title>
+<meta name="author" content="Richard Geen">
+<meta name="description" content="We are producing lots of data every month. Hundreds of thousands of stops, hundreds of millions of observations, billions in total. That’s far too much to put in a csv. We need a database if we’re...">
+<meta name="generator" content="bookdown 0.23.5 with bs4_book()">
+<meta property="og:title" content="6 Storage - Why a graph? | Yulo, a telematics story">
+<meta property="og:type" content="book">
+<meta property="og:description" content="We are producing lots of data every month. Hundreds of thousands of stops, hundreds of millions of observations, billions in total. That’s far too much to put in a csv. We need a database if we’re...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="6 Storage - Why a graph? | Yulo, a telematics story">
+<meta name="twitter:description" content="We are producing lots of data every month. Hundreds of thousands of stops, hundreds of millions of observations, billions in total. That’s far too much to put in a csv. We need a database if we’re...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.10/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Roboto-0.4.0/font.css" rel="stylesheet">
+<link href="libs/_Roboto%20Mono-0.4.0/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Yulo, a telematics story</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome!</a></li>
+<li><a class="" href="why-telematics.html"><span class="header-section-number">1</span> Why Telematics?</a></li>
+<li><a class="" href="the-raw-stuff.html"><span class="header-section-number">2</span> The raw stuff</a></li>
+<li><a class="" href="trips-and-stops.html"><span class="header-section-number">3</span> Trips and stops</a></li>
+<li><a class="" href="what-roads-are-they-on.html"><span class="header-section-number">4</span> What roads are they on?</a></li>
+<li><a class="" href="other-stuff.html"><span class="header-section-number">5</span> Other stuff</a></li>
+<li><a class="active" href="storage---why-a-graph.html"><span class="header-section-number">6</span> Storage - Why a graph?</a></li>
+<li><a class="" href="a-small-sample-of-what-weve-done-so-far.html"><span class="header-section-number">7</span> A small sample of what we’ve done so far</a></li>
+<li><a class="" href="why-yulo.html"><span class="header-section-number">8</span> Why Yulo</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="storage---why-a-graph" class="section level1" number="6">
+<h1>
+<span class="header-section-number">6</span> Storage - Why a graph?<a class="anchor" aria-label="anchor" href="#storage---why-a-graph"><i class="fas fa-link"></i></a>
+</h1>
+<p>We are producing lots of data every month. Hundreds of thousands of stops, hundreds of millions of observations, billions in total. That’s far too much to put in a csv. We need a database if we’re going to work with it, but what kind.
+## “Relational” databases{-}</p>
+<p>The go to option for databases is a “relational” database - I’ll get to the scare quotes in a moment. There’s good reasons for this, it’s an established technology with lots of problems already solved and lots of people are familiar with SQL (Structured Query Language) which is used to access it. So let’s see how it fits our data.</p>
+<p>Data in relational databases are in tables, linked together with keys. So for instance we could have a table of “observations,” with a latlon, a speed, a time etc. It’d also have a column that is a key to a table called “segments” which shows which segment was used, and information about that segment, such as its class and speed limit. The observations tables would also have a key column linked to a table called trips, which can be linked to vehicles and adjacent stops for instance. A table of stops can also be linked to vehicles, and potentially a table of locations.</p>
+<p>This is straight forward for a common kind of query we might want; finding out about speeds on a given road segment. We get the segments table and link it to the observations table and filter to that segment and whatever time period we want. Or we get a location we want and link it to the stops table and filter to see how many stops there were.</p>
+<p>But we have another major kind of query we call “tours.” Recall that a trip, in our framework, is just whatever is between two stops. In regular speech though a “trip” is more like a journey between specific places. This might be a journey between Melbourne and Sydney, even if the truck stops for a while for a driver to sleep, eat or otherwise just rest. In our framework we call this a tour, and we have to define them differently based on specific purpose; a stop of 8 hours or more between Melbourne and Brisbane makes sense, but a stop that long between Canberra and Sydney probably means it’s two journeys back to back.</p>
+<p>We need a to string stops together to define these tours, a query that won’t just link two rows, but an arbitrary number of stops that make up a tour. This isn’t impossible in SQL and relational databases, but it’s not easy either. Our data base is going to be used by data people, not computer scientists, and we don’t want to make it more hassle than is necessary.</p>
+<p>There’s also another problem, even with the simple segment query I mentioned. Remember every time we match a ping to a road segment we also get a list of segments leading up to it. So we get a recorded observation and several imputed observations of road segments, but they are all associated with the same time stamp, latlon, speed and distance travelled. We could keep these as separate rows in a table, but we’re duplicating basically everything except the link to the segment table. That seems a waste of space and resources. Ideally we’d link one row in the observation table to several rows in the segment table. Again, that isn’t impossible, but it isn’t straightforward.</p>
+<div id="graph-databases" class="section level2 unnumbered">
+<h2>Graph databases<a class="anchor" aria-label="anchor" href="#graph-databases"><i class="fas fa-link"></i></a>
+</h2>
+<p>In the end we looked at graph databases instead. So what is a graph database? When I talked to people about this they went and did their own research and found a lot of explainers that started out with variations on “unlike relational databases, graph databases store data as a series of relationships.” That didn’t really help much! However it is true that the main way graph databases are different to relational databases is they are all about relationships. Now you get why I used the scare quotes on “relational database.”</p>
+<p>Here, graph doesn’t mean a plot of data, if means a network. We already had to start thinking in graph terms when we looked at road networks.</p>
+<p>Graph databases store information on nodes that are linked to one another by relationships. They’re most obviously used for things like social media networks A user is a node. A post by that user is a node. The user is linked to the post by an edge saying they wrote it. Another user is attached to the first user by an edge saying they follow them. That user as also attached to the post with an edge saying they liked it. Any query just finds a node they are interested in and follows the paths until they get the info they need.</p>
+<p>So how does that look for us?</p>
+<p>The segment queries and location queries are fairly easy. A road segment node is attached to any number of observation nodes by an edge saying the observation was on that segment. These observations in turn have any number of edges to segments showing all the segments they were recorded on or were imputed on. Likewise a location node, like a rest stop, is linked to any number of stops. You start at the segment or location node and follow the paths along the edges where you find the data.</p>
+<p>But it’s the tour queries where graph logic helps us. Say we want to find all vehicles that moved between Melbourne and Brisbane. We have a set of parameters, say, the starting and ending stop must be at least an hour so they seem like destinations, and there can’t be any stop on the way more than about 16 hours. We also want to make sure the whole tour is less than, say, 48 hours lest we get trucks that go all around the country before arriving in Brisbane. The graph database first finds all stops in Melbourne. For each it then follows the edge saying “next stop.” Reaching the next stop it checks a few things. Is it more than 48 hours after the first stop? If so we stop and move on. Is it in Brisbane? We have a tour! Is it not in Brisbane, but more than 16 hours in duration? If so we move on. If the stop isn’t in Brisbane yet, but also not more than 48 hours later and not too long, we follow the next stop edge, and repeat the process.</p>
+<p>This is much more intuitive than the ways we could have done this in a relational database.</p>
+<div class="inline-figure">
+<img src="pics/database.png" style="width:100.0%" alt="A simple representation of how our data can be shown in graph form">
+## Which database,and which query language{-}</div>
+<p>Graph databases are fairly new, especially compared to the venerable relational database, so the technology isn’t settled in the same way and we had to make some choices. There are a bunch of other considerations with performance and cost we won’t consider here, but a major one for your project was the query language used - the way humans can ask the database for data. Relational databases are well settled on the well known SQL, but different graph databases favoured different languages; what was good for our purposes? There were three main candidates.</p>
+<div id="graphql" class="section level3 unnumbered">
+<h3>GraphQL<a class="anchor" aria-label="anchor" href="#graphql"><i class="fas fa-link"></i></a>
+</h3>
+<p><a href="https://graphql.org">GraphQL</a> was developed by Facebook for their own use and released as an open standard. It is the favoured language for databases like <a href="https://dgraph.io">DGraph</a>. It was designed for queries for a social media website and it shows. The queries look like JSON, which is commonly used to share data between web services, and connected nodes are nested in a structure of brackets in the same format the data will come out in. This is very good for embedding in web applications where the queries are written by machine, but it doesn’t quite capture the intuitive movement along paths on the graph; in the example below the difference between the attribute “name” and the edge “friends” relies on curly brackets. It isn’t well suited for data analysts trying to write their own queries.</p>
+<pre><code>{
+  hero {
+    name
+    friends {
+      name
+    }
+  }
+}</code></pre>
+</div>
+<div id="gremlin" class="section level3 unnumbered">
+<h3>Gremlin<a class="anchor" aria-label="anchor" href="#gremlin"><i class="fas fa-link"></i></a>
+</h3>
+<p>Another option is <a href="https://tinkerpop.apache.org/gremlin.html">Gremlin</a> developed by Apache TinkerPop and is favoured by databases such as <a href="https://orientdb.org">OrientDB</a>. It was built for integration with applications written in Java and the many languages that emulate Java’s syntax, which is object oriented with dot syntax. You can roughly think of the database as a blob with a bunch of buttons. You can press the button that gives you all the segment nodes as another blob which has a button that will give you edges to observations. You keep pressing buttons on blobs until you get the button that returns the average of speeds. In practice these buttons are accessed with a dot (<code>.</code>) after the object and these are tied together.</p>
+<p><a href="https://en.wikipedia.org/wiki/Gremlin_(query_language)#Declarative_pattern_matching_traversals">Wikipedia</a> describes the following example as “What 80’s action movies do 30-something programmers like? Group count the movies by their name and sort the group count map in decreasing order by value.”</p>
+<pre><code>g.V().
+  match(
+  __.as('a').hasLabel('movie'),
+  __.as('a').out('category').has('name','Action'),
+  __.as('a').has('year',between(1980,1990)),
+  __.as('a').inE('rated').as('b'),
+  __.as('b').has('stars',5),
+  __.as('b').outV().as('c'),
+  __.as('c').out('occupation').has('name','programmer'),
+  __.as('c').has('age',between(30,40))).
+  select('a').groupCount().by('name').
+  order(local).by(valueDecr).
+  limit(local,10)</code></pre>
+<p>You can puzzle over this for a while but it’s still not great for our purposes. You need to pay attention to see when it switches between following edges and accessing attributes because they both uses dots. Data analysis and statistics isn’t really favourable to object orientated languages in general, so, like GraphQL, what is friendly to application developers isn’t friendly to our users.</p>
+</div>
+<div id="cypher" class="section level3 unnumbered">
+<h3>Cypher<a class="anchor" aria-label="anchor" href="#cypher"><i class="fas fa-link"></i></a>
+</h3>
+<p>We eventually settled on <a href="https://neo4j.com/developer/cypher/">Cypher</a>, developed by <a href="https://neo4j.com">Neo4j</a> for their own database and released as an open standard. It incorporates the structure of the graph directly into its syntax. For example this is how we might query the average speed on a segment by hour of day.</p>
+<pre><code>MATCH (s:Segment{osm_id: $SEGMENT_ID"})&lt;-[:ON]-(o:Observation)
+RETURN o.datetime.hour, mean(o.imputed_speed) as average_speed</code></pre>
+<p>Hopefully this is intuitive to you. We’re looking for two kinds of nodes, Segment and Observation attached by an edge labelled ON. This is visually apparent, and the edge even has an arrow showing the observation is on the segment and not the other way around. In this example we’ve restricted the Segment observation to one with the segment ID we want. We return attributes from nodes with dots, and even attributes of attributes, for instance extracting the hour from the datetime on the observation. By returning an attribute next to a function (here mean) the query does that function separately on each value of that attribute.</p>
+<p>So the different bits are clear syntactically. There are nodes that look like <code>(Node)</code>, edges that look like <code>-[:EDGES]-&gt;</code>, attributes that look like <code>Node.attribute</code> and functions that look like <code>function()</code>. This makes writing queries much easier for our data analyst users.</p>
+<p>So we have have our data in the database, and we can do some work.</p>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="other-stuff.html"><span class="header-section-number">5</span> Other stuff</a></div>
+<div class="next"><a href="a-small-sample-of-what-weve-done-so-far.html"><span class="header-section-number">7</span> A small sample of what we’ve done so far</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#storage---why-a-graph"><span class="header-section-number">6</span> Storage - Why a graph?</a></li>
+<li>
+<a class="nav-link" href="#graph-databases">Graph databases</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#graphql">GraphQL</a></li>
+<li><a class="nav-link" href="#gremlin">Gremlin</a></li>
+<li><a class="nav-link" href="#cypher">Cypher</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Yulo, a telematics story</strong>" was written by Richard Geen. It was last built on 2021-11-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
