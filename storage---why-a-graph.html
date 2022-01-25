@@ -7,18 +7,18 @@
 <title>6 Storage - Why a graph? | Yulo, a telematics story</title>
 <meta name="author" content="Richard Green">
 <meta name="description" content="We are producing lots of data every month. Hundreds of thousands of stops, hundreds of millions of observations, billions in total. That’s far too much to put in a csv. We need a database if we’re...">
-<meta name="generator" content="bookdown 0.23.5 with bs4_book()">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="6 Storage - Why a graph? | Yulo, a telematics story">
 <meta property="og:type" content="book">
 <meta property="og:description" content="We are producing lots of data every month. Hundreds of thousands of stops, hundreds of millions of observations, billions in total. That’s far too much to put in a csv. We need a database if we’re...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="6 Storage - Why a graph? | Yulo, a telematics story">
 <meta name="twitter:description" content="We are producing lots of data every month. Hundreds of thousands of stops, hundreds of millions of observations, billions in total. That’s far too much to put in a csv. We need a database if we’re...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.10/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Roboto-0.4.0/font.css" rel="stylesheet">
 <link href="libs/_Roboto%20Mono-0.4.0/font.css" rel="stylesheet">
-<script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
 </head>
 <body data-spy="scroll" data-target="#toc">
@@ -79,9 +79,13 @@
 <p>The segment queries and location queries are fairly easy. A road segment node is attached to any number of observation nodes by an edge saying the observation was on that segment. These observations in turn have any number of edges to segments showing all the segments they were recorded on or were imputed on. Likewise a location node, like a rest stop, is linked to any number of stops. You start at the segment or location node and follow the paths along the edges where you find the data.</p>
 <p>But it’s the tour queries where graph logic helps us. Say we want to find all vehicles that moved between Melbourne and Brisbane. We have a set of parameters, say, the starting and ending stop must be at least an hour so they seem like destinations, and there can’t be any stop on the way more than about 16 hours. We also want to make sure the whole tour is less than, say, 48 hours lest we get trucks that go all around the country before arriving in Brisbane. The graph database first finds all stops in Melbourne. For each it then follows the edge saying “next stop.” Reaching the next stop it checks a few things. Is it more than 48 hours after the first stop? If so we stop and move on. Is it in Brisbane? We have a tour! Is it not in Brisbane, but more than 16 hours in duration? If so we move on. If the stop isn’t in Brisbane yet, but also not more than 48 hours later and not too long, we follow the next stop edge, and repeat the process.</p>
 <p>This is much more intuitive than the ways we could have done this in a relational database.</p>
-<div class="inline-figure">
-<img src="pics/database.png" style="width:100.0%" alt="A simple representation of how our data can be shown in graph form">
-## Which database,and which query language{-}</div>
+<div class="figure">
+<img src="pics/database.png" style="width:100.0%" alt=""><p class="caption">A simple representation of how our data can be shown in graph form</p>
+</div>
+</div>
+<div id="which-databaseand-which-query-language" class="section level2 unnumbered">
+<h2>Which database,and which query language<a class="anchor" aria-label="anchor" href="#which-databaseand-which-query-language"><i class="fas fa-link"></i></a>
+</h2>
 <p>Graph databases are fairly new, especially compared to the venerable relational database, so the technology isn’t settled in the same way and we had to make some choices. There are a bunch of other considerations with performance and cost we won’t consider here, but a major one for your project was the query language used - the way humans can ask the database for data. Relational databases are well settled on the well known SQL, but different graph databases favoured different languages; what was good for our purposes? There were three main candidates.</p>
 <div id="graphql" class="section level3 unnumbered">
 <h3>GraphQL<a class="anchor" aria-label="anchor" href="#graphql"><i class="fas fa-link"></i></a>
@@ -136,8 +140,9 @@ RETURN o.datetime.hour, mean(o.imputed_speed) as average_speed</code></pre>
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#storage---why-a-graph"><span class="header-section-number">6</span> Storage - Why a graph?</a></li>
+<li><a class="nav-link" href="#graph-databases">Graph databases</a></li>
 <li>
-<a class="nav-link" href="#graph-databases">Graph databases</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#which-databaseand-which-query-language">Which database,and which query language</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#graphql">GraphQL</a></li>
 <li><a class="nav-link" href="#gremlin">Gremlin</a></li>
 <li><a class="nav-link" href="#cypher">Cypher</a></li>
@@ -159,7 +164,7 @@ RETURN o.datetime.hour, mean(o.imputed_speed) as average_speed</code></pre>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Yulo, a telematics story</strong>" was written by Richard Green. It was last built on 2021-11-22.</p>
+    <p>"<strong>Yulo, a telematics story</strong>" was written by Richard Green. It was last built on 2022-01-25.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

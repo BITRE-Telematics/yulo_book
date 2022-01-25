@@ -7,18 +7,18 @@
 <title>4 What roads are they on? | Yulo, a telematics story</title>
 <meta name="author" content="Richard Green">
 <meta name="description" content="If we were to find out how trucks are using the road, we need to know which roads they are using. In fact, we need to know where the roads are. ##Matching to what? First we have to go on what...">
-<meta name="generator" content="bookdown 0.23.5 with bs4_book()">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="4 What roads are they on? | Yulo, a telematics story">
 <meta property="og:type" content="book">
 <meta property="og:description" content="If we were to find out how trucks are using the road, we need to know which roads they are using. In fact, we need to know where the roads are. ##Matching to what? First we have to go on what...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="4 What roads are they on? | Yulo, a telematics story">
 <meta name="twitter:description" content="If we were to find out how trucks are using the road, we need to know which roads they are using. In fact, we need to know where the roads are. ##Matching to what? First we have to go on what...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.10/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Roboto-0.4.0/font.css" rel="stylesheet">
 <link href="libs/_Roboto%20Mono-0.4.0/font.css" rel="stylesheet">
-<script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
 </head>
 <body data-spy="scroll" data-target="#toc">
@@ -94,8 +94,9 @@ It’d be impractical for every edge between two nodes to be called a road by it
 <p>So how do we match trucks to the segments. Remember from Part 2 that inevitable GPS error means observations are always jumping around with random noise. Moreover our road segments are one dimensional, even if the GPS was entirely accurate the trucks wouldn’t be on the line unless they were in the middle of the road, which we hope they aren’t!
 The easiest method is just assuming they are on whichever segment is closest. This is called nearest neighbour matching. The computer takes segments within a given radius and checks which one is closest. Simple! But there are problems with this approach.</p>
 <p>The first is random GPS error, often enough to put an observation closer to a side road, or to a road next to a motorway. That’s obvious from the image of Southbank we saw in Part 2. We want something more accurate than that.</p>
-<div class="inline-figure">The second is even when it is accurate we only learn about the segment the truck was using when it pinged. We have data every 1 to 5 minutes; a truck may have used many segments in that time, but we only learn about one of them. You might think that with enough data you’d get information about every segment eventually but it’s not that simple.
-<img src="pics/skipped_segs.png" style="width:100.0%" alt="a stylised diagram of vehicles only pinging on selected segments">
+<p>The second is even when it is accurate we only learn about the segment the truck was using when it pinged. We have data every 1 to 5 minutes; a truck may have used many segments in that time, but we only learn about one of them. You might think that with enough data you’d get information about every segment eventually but it’s not that simple.</p>
+<div class="figure">
+<img src="pics/skipped_segs.png" style="width:100.0%" alt=""><p class="caption">a stylised diagram of vehicles only pinging on selected segments</p>
 </div>
 <p>Obviously, as we noted earlier, some segments will never give us observations because they are in tunnels where the GPS until cannot hear the satellites. We still care about these,in fact they’re usually incredibly important motorways.</p>
 <p>Less obviously this biases our sample towards slower vehicles. Imagine two vehicles, one fast and one slow, both reporting once a minute. The fast vehicle goes twice as fast as the slow. The fast vehicle uses 10 segments in a minute, and is recorded on one. The slow vehicle takes 2 minutes and reports twice. Two thirds of our observations for these segments are now from the slow vehicle. The real average speed is 75 per cent of the fast vehicle, but our data makes it looks like 66 per cent. This is a stylised example but the greater number of slower observations add up. Slower vehicles spend more time on any given segment, so they are more likely to be on it when they ping, and all our data gets biased. And that’s when we have speed data anyway.</p>
@@ -104,8 +105,9 @@ The easiest method is just assuming they are on whichever segment is closest. Th
 Think back to the South Melbourne map again. It’s obvious to us that some of the points that are to the side of the motorway or on surface streets are really on the motorway, by <em>why</em> is it obvious. If we joined the dots in order it’d be even clearer. Trucks that are on the motorway are much more likely to have stayed on the motorway than to have left it via an offramp to get to a surface road that is close to the motorway. In short we are balancing the probabilities that the observation is on the right road with how probable it is that the truck would have taken the route necessary to get there.</p>
 <p>This is the core of Hidden Markov Map Matching (HMMM). We select candidates from segments near to the observation and calculate routes to each of them from the last observation. Segments closer to the observation are more likely, segments that have shorter routes on higher graded routes are also more likely. Our choice is the balance of the two. But how do we match the first observation? Well there we still have to use nearest neighbour.</p>
 <p>For those who care this is why it is called Hidden Markov Map Matching. Like a Markov chain the probability of the next observation’s location is a function of the last observation, but it is “hidden” because our first observation was an educated guess. And we match to a map.</p>
-<div class="inline-figure">In the diagram below we can see a vehicle has moved from observation I on segment A. It is now at II. It is closer to segment C, but the route to segment B is much more direct, so we conclude it is actually on B.
-<img src="pics/HMMM.png" style="width:100.0%" alt="an image showing two pings, the upper closer to a segment connected by a convoluted route to the first and but father than one connected by a traight line">
+<p>In the diagram below we can see a vehicle has moved from observation I on segment A. It is now at II. It is closer to segment C, but the route to segment B is much more direct, so we conclude it is actually on B.</p>
+<div class="figure">
+<img src="pics/HMMM.png" style="width:100.0%" alt=""><p class="caption">an image showing two pings, the upper closer to a segment connected by a convoluted route to the first and but father than one connected by a traight line</p>
 </div>
 <p>Not only is this more accurate but we immediately get other benefits. Since we calculated the likely route we also know the road segments the vehicle used, even if it didn’t ping on them, or if they were in a tunnel. Now we have data on all segments. We also have the length of the route and the time it took, which means we can calculate an average speed as well. This is great too because it isn’t biased towards slower vehicles, and it better reflects travel experience than point estimates that can be zero (at a traffic light) or momentarily faster than average. Most importantly, this gives us speeds from the vast majority of vehicles for which we have no speed data.</p>
 </div>
@@ -172,7 +174,7 @@ We ran into other problems we didn’t expect.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Yulo, a telematics story</strong>" was written by Richard Green. It was last built on 2021-11-22.</p>
+    <p>"<strong>Yulo, a telematics story</strong>" was written by Richard Green. It was last built on 2022-01-25.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -13,6 +13,7 @@ The users of our data probably care more about whole journeys than individual se
 ![and animated gif of the M5 showing points of delay during peak hours near the M5 tunnel](pics/M5 - Hume Motorway to M1.gif){width=100%}
 
 With these segments we could collate data and calculate travel times and uncertainty for the entire route. We'd have to make some assumptions, mainly that neighbouring segments had their slow days at the same time, but with median and 1st and 3rd quartile speeds, multiplied by the distance used on a segment, we have median and interquartile ranges for each hour of the day. Here's estimated travel times for the whole M5 in 2019.
+
 ![a graph for the M5, descibed in the report below](pics/M5 - Hume Motorway to M1_times.png){width=100%}
 
 This worked great during the day, or on motorways where these was lots of data, but it could run into problems where data was more scarce. For some routes you might have a segment at 3am with no observations. Even if you had a small amount of data you ran the risk of outliers. A truck that spent most of its time at a traffic light between pings drags down the averages unless swamped by better data. As such, some routes were implausibly messy and volatile. We could just wait for more data to come in, but we might also want to track changes over shorter time periods, for instance comparing congestion week to week. 
@@ -29,6 +30,7 @@ Our colleagues in the Department have also created the [National Freight Data Hu
 
 ## Port Maps{-}
 As yet our data, whilst extensive, still comes from a limited number of firms. This makes it unwise to publish work on origin destination lest we betray information about our data providers and our clients, but we have still have developed techniques and have used the work internally. What we have published are reports on what we call the catchments of Australia's major city ports. Like maps of large river basins they show journeys draining into the ports.
+
 ![A map showing in-bound trips to the Port of Fremantle](pics/Perth_to.png){width=100%}
 
 ## Potential future work{-}

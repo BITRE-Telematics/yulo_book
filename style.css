@@ -18,6 +18,10 @@ pre code {
   white-space: inherit;
 }
 
+a {
+  color: red;
+}
+
 .book .book-summary {
     position: absolute;
     top: 0;

@@ -1,7 +1,7 @@
 --- 
 title: "Yulo, a telematics story"
-author: "Richard Geen"
-date: "2021-11-22"
+author: "Richard Green"
+date: "2022-01-25"
 site: bookdown::bookdown_site
 output: bookdown::bs4_book
 documentclass: book

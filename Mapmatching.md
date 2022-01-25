@@ -44,6 +44,7 @@ The easiest method is just assuming they are on whichever segment is closest. Th
 The first is random GPS error, often enough to put an observation closer to a side road, or to a road next to a motorway. That's obvious from the image of Southbank we saw in Part 2. We want something more accurate than that.
 
 The second is even when it is accurate we only learn about the segment the truck was using when it pinged. We have data every 1 to 5 minutes; a truck may have used many segments in that time, but we only learn about one of them. You might think that with enough data you'd get information about every segment eventually but it's not that simple. 
+
 ![a stylised diagram of vehicles only pinging on selected segments](pics/skipped_segs.png){width=100%}
 
 Obviously, as we noted earlier, some segments will never give us observations because they are in tunnels where the GPS until cannot hear the satellites. We still care about these,in fact they're usually incredibly important motorways. 
@@ -60,6 +61,7 @@ This is the core of Hidden Markov Map Matching (HMMM). We select candidates from
 For those who care this is why it is called Hidden Markov Map Matching. Like a Markov chain the probability of the next observation's location is a function of the last observation, but it is "hidden" because our first observation was an educated guess. And we match to a map.
 
 In the diagram below we can see a vehicle has moved from observation I on segment A. It is now at II. It is closer to segment C, but the route to segment B is much more direct, so we conclude it is actually on B.
+
 ![an image showing two pings, the upper closer to a segment connected by a convoluted route to the first and but father than one connected by a traight line](pics/HMMM.png){width=100%}
 
 Not only is this more accurate but we immediately get other benefits. Since we calculated the likely route we also know the road segments the vehicle used, even if it didn't ping on them, or if they were in a tunnel. Now we have data on all segments. We also have the length of the route and the time it took, which means we can calculate an average speed as well. This is great too because it isn't biased towards slower vehicles, and it better reflects travel experience than point estimates that can be zero (at a traffic light) or momentarily faster than average. Most importantly, this gives us speeds from the vast majority of vehicles for which we have no speed data.

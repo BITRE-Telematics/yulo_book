@@ -26,6 +26,7 @@ We start with the first observation. We'll provisionally put this in a stop for 
 Now we look at the next stop and see how far away it is. If it is within our given radius it is still a provisional stop, so we add this point to it as well, and we calculate a centroid, or average position of the stop, from these points. This is what we compare the next observations to. Also, if it is exactly the same as the last point it's one of the repeated observations, so we just chuck it.
 
 We keep doing this until we reach an observation that has moved outside the radius. Maybe this was the end of a stop. But first we do a quick check of the "crow flies" speed. If it is something ridiculous we know it was one of the erroneous jumps, so we chuck it and move to the next one. If it seems legit, we turn our attention to the provisional stop points. If they cover a given amount of time, we have our first stop. We record the start time, end time and centroid, and everything else can get tossed. The new observation, and the last one (for reasons I will cover later) are added to a provisional trip.
+
 ![A simple representation of the process described in the text](pics/tripgrouping.png){width=100%}
 
 If the provisional stop *isn't* long enough, then all the observations are added to the last provisional trip. If the truck was moving prior to the provisional stop event there will already be observations there.

@@ -7,18 +7,18 @@
 <title>3 Trips and stops | Yulo, a telematics story</title>
 <meta name="author" content="Richard Green">
 <meta name="description" content="The first step must be cleaning the data, right? Garbage in, garbage out; if we start working with highly flawed data we won’t get any good results. So we’ve got to get rid of those erroneous...">
-<meta name="generator" content="bookdown 0.23.5 with bs4_book()">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="3 Trips and stops | Yulo, a telematics story">
 <meta property="og:type" content="book">
 <meta property="og:description" content="The first step must be cleaning the data, right? Garbage in, garbage out; if we start working with highly flawed data we won’t get any good results. So we’ve got to get rid of those erroneous...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="3 Trips and stops | Yulo, a telematics story">
 <meta name="twitter:description" content="The first step must be cleaning the data, right? Garbage in, garbage out; if we start working with highly flawed data we won’t get any good results. So we’ve got to get rid of those erroneous...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.10/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Roboto-0.4.0/font.css" rel="stylesheet">
 <link href="libs/_Roboto%20Mono-0.4.0/font.css" rel="stylesheet">
-<script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
 </head>
 <body data-spy="scroll" data-target="#toc">
@@ -76,8 +76,9 @@
 <p>Their approach was based around clustering. A stop was just when the trace stayed within a given radius for a given time.</p>
 <p>We start with the first observation. We’ll provisionally put this in a stop for now.</p>
 <p>Now we look at the next stop and see how far away it is. If it is within our given radius it is still a provisional stop, so we add this point to it as well, and we calculate a centroid, or average position of the stop, from these points. This is what we compare the next observations to. Also, if it is exactly the same as the last point it’s one of the repeated observations, so we just chuck it.</p>
-<div class="inline-figure">We keep doing this until we reach an observation that has moved outside the radius. Maybe this was the end of a stop. But first we do a quick check of the “crow flies” speed. If it is something ridiculous we know it was one of the erroneous jumps, so we chuck it and move to the next one. If it seems legit, we turn our attention to the provisional stop points. If they cover a given amount of time, we have our first stop. We record the start time, end time and centroid, and everything else can get tossed. The new observation, and the last one (for reasons I will cover later) are added to a provisional trip.
-<img src="pics/tripgrouping.png" style="width:100.0%" alt="A simple representation of the process described in the text">
+<p>We keep doing this until we reach an observation that has moved outside the radius. Maybe this was the end of a stop. But first we do a quick check of the “crow flies” speed. If it is something ridiculous we know it was one of the erroneous jumps, so we chuck it and move to the next one. If it seems legit, we turn our attention to the provisional stop points. If they cover a given amount of time, we have our first stop. We record the start time, end time and centroid, and everything else can get tossed. The new observation, and the last one (for reasons I will cover later) are added to a provisional trip.</p>
+<div class="figure">
+<img src="pics/tripgrouping.png" style="width:100.0%" alt=""><p class="caption">A simple representation of the process described in the text</p>
 </div>
 <p>If the provisional stop <em>isn’t</em> long enough, then all the observations are added to the last provisional trip. If the truck was moving prior to the provisional stop event there will already be observations there.</p>
 <p>As such, every time we confirm the end of a trip event, we have a trip stop pair; the summary data of the stop, and all the observations leading up to the stop, and we can record these.</p>
@@ -137,7 +138,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Yulo, a telematics story</strong>" was written by Richard Green. It was last built on 2021-11-22.</p>
+    <p>"<strong>Yulo, a telematics story</strong>" was written by Richard Green. It was last built on 2022-01-25.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

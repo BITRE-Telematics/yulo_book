@@ -30,6 +30,7 @@ But it's the tour queries where graph logic helps us. Say we want to find all ve
 This is much more intuitive than the ways we could have done this in a relational database. 
 
 ![A simple representation of how our data can be shown in graph form](pics/database.png){width=100%}
+
 ## Which database,and which query language{-}
 
 Graph databases are fairly new, especially compared to the venerable relational database, so the technology isn't settled in the same way and we had to make some choices. There are a bunch of other considerations with performance and cost we won't consider here, but a major one for your project was the query language used - the way humans can ask the database for data. Relational databases are well settled on the well known SQL, but different graph databases favoured different languages; what was good for our purposes? There were three main candidates.
